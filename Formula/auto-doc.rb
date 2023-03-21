@@ -5,21 +5,21 @@
 class AutoDoc < Formula
   desc "Generate markdown tables for your Github action and reusable workflow with ease."
   homepage "https://github.com/tj-actions/auto-doc"
-  version "2.2.4"
+  version "2.2.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.4/auto-doc_2.2.4_Darwin_x86_64.tar.gz"
-      sha256 "d28e05c986ccdcb08cf0dba49813e74a47b98de22a40776ee8784119ce5b9498"
+      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.5/auto-doc_2.2.5_Darwin_x86_64.tar.gz"
+      sha256 "e62fbad53d387388abe859d24912165c22d1e92842de99a1c699cff381c1fe27"
 
       def install
         bin.install "auto-doc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.4/auto-doc_2.2.4_Darwin_arm64.tar.gz"
-      sha256 "2c474a8eb7e1c2fff926ef6169aa320d4d18f816bade6041fe193f45ee8e4d83"
+      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.5/auto-doc_2.2.5_Darwin_arm64.tar.gz"
+      sha256 "37e346cdff61dd8b14264cdd43461f87fd149d41ad8c44bfc7653a3289c81302"
 
       def install
         bin.install "auto-doc"
@@ -28,25 +28,25 @@ class AutoDoc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.4/auto-doc_2.2.4_Linux_armv6.tar.gz"
-      sha256 "2d26a2c54c0c7cc732f2acf5e1d95e134d39f9ed50955c9ed924e162b3ee6a50"
+    if Hardware::CPU.intel?
+      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.5/auto-doc_2.2.5_Linux_x86_64.tar.gz"
+      sha256 "693375ccfbaa399a2866fff8f57631c605991fa26d2c0019881f9d3244d98329"
 
       def install
         bin.install "auto-doc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.4/auto-doc_2.2.4_Linux_x86_64.tar.gz"
-      sha256 "8c3ff00de34db77ed5cc6bb2d104f52d0b89922190e927ffd52e88f74c3f191a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.5/auto-doc_2.2.5_Linux_armv6.tar.gz"
+      sha256 "ad57e08631684f182d987879ec2adeb33e4a6d89199b0d0a06108d1e204a2f12"
 
       def install
         bin.install "auto-doc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.4/auto-doc_2.2.4_Linux_arm64.tar.gz"
-      sha256 "de2101776a40d76a10f823065ac0198ab10a9af2c5b49a8c39ff213851eceb67"
+      url "https://github.com/tj-actions/auto-doc/releases/download/v2.2.5/auto-doc_2.2.5_Linux_arm64.tar.gz"
+      sha256 "ce28dadff0de4b3bff60d2c7aa91780f67ea3702ac23618b03a2b4575ee5b468"
 
       def install
         bin.install "auto-doc"
